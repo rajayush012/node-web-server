@@ -55,6 +55,21 @@ app.get('/about', (req,res)=>{
     })
 });
 
+app.get('/projects', (req,res)=>{
+    
+    res.render('projects.hbs',{
+        title: "It's my project page!",
+        projects: [{
+            title: "Pro1",
+            content: "Djangooo"
+        },{
+            title: "Pro2",
+            content: "nodeeeee"
+        }]
+        
+    })
+});
+
 app.get('/bad', (req,res) => {
     res.send({
         errorMessage: 'Failed to load the page'
